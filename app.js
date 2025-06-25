@@ -47,9 +47,9 @@ app.get('/obtenerUsuario',(req,res)=>{
         var i=0;
 
         respuesta.forEach(user => {
-            i++;
+            
             //*= es un operacion de iteracion = x=x+5 o que es lo mismo x+=5
-            userHTML+= `<tr><td>${i}</td><td>${user.nombre}</td></tr>`;
+            userHTML+= `<tr><td>${user.id}</td><td>${user.nombre}</td></tr>`;
         });
 
         return res.send(`<table>
